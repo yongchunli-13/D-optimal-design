@@ -119,7 +119,7 @@ def findopt(X, Xs, i, indexN,n,val):
     tempi = np.argmax(temp)
     opti = indexN[tempi]
         
-    val = val - log(1 + a[i]*Ys*a[i].T) + log(1+a[opti]*Ys*a[opti].T)
+    val = val + log(1 - a[i]*Xs*a[i].T) + log(1+a[opti]*Ys*a[opti].T)
        
     return Y, Ys, opti, val
 
